@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>littn3r</title>
+        <meta property="og:title" content="littn3r">
+        <meta property="og:locale" content="en_EU">
+        <meta property="og:description" content="littn3r's main page">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+        <script src="https://sindresorhus.com/devtools-detect/index.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/fonts/gsans/style.css">
+        <link rel="stylesheet" href="assets/vars.css">
+        <link rel="stylesheet" href="assets/css/index/style.css">
+        <script defer src="assets/fontawesome/js/all.js"></script> 
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+        
+    </head>
+    <div id="donate">
+            <div class="popup">
+
+                  <div class="labelbtn"><label1 class="donate_title">Донат</label>
+                  <a href="javascript://" class="btnc" onclick="document.getElementById('donate').style.display='none';"><i class="fas fa-times"></i></a>
+                  </div>
+           
+                       <center>  <form action="https://itsolegdm.dyaka.com/itsolegdm_site" method="get">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="name" placeholder="Ваше Имя" required="" minlength="2">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="number" class="form-control" name="amount" placeholder="Сумма" autocomplete="off" required="" value="10" min="1" step="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="8" class="form-control" name="message" placeholder="Сообщение"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-danger btn-block btn-lg">Задонатить</button>
+                        </div>
+                    </form>
+  </center>
+                    
+                <script type="text/javascript">
+                  $(document).mouseup(function (e){
+                  var modalctr = $("#donate");
+                  var modal = $(".popup");
+                  if (!modal.is(e.target) && modal.has(e.target).length === 0){
+                  modalctr.hide();
+}
+});</script>
+            </div>
+        </div>
+
+    <body class="center">
+<header class="center info">
+    <div class="center ebat">
+        <div class="avatar-container"><img src="assets/images/ava.jpg" oncontextmenu="return false;" class="avatar"></div>
+        <h3><b><span id="name">ItsOlegDm</span></b></h2>
+    <h2><span id="description" >So, what are you doing here?</span></h3>
+    </div>
+    <div class="buttons">
+        <a href="javascript://" class="link" onclick="location.href='tg://resolve?domain=littn3r'"><i class="fab fa-telegram-plane"></i></a>
+        <a href="javascript://" class="link" onclick="location.href='https://vk.com/littn3r'"><i class="fab fa-vk"></i></a>
+        <a href="javascript://" class="link" onclick="location.href='https://steamcommunity.com/id/littn3r'"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="buttons">
+      <a href="javascript://" class="link" onclick="location.href='https://twitter.com/littn3r'"><i class="fab fa-twitter"></i></a>
+       <a href="javascript://" class="link" onclick="document.getElementById('donate').style.display='block'"><i class="fas fa-dollar-sign"></i></a>
+    </div>
+    <div class="center ebat">
+
+</header>
+
+  <div>
+         <script type="text/javascript">  
+      setInterval(function () {  
+      date = new Date(),  
+      h = date.getHours(),  
+      m = date.getMinutes(),  
+      s = date.getSeconds(),  
+      h = (h < 10) ? '0' + h : h,  
+      m = (m < 10) ? '0' + m : m,  
+      s = (s < 10) ? '0' + s : s,  
+    document.getElementById('time').innerHTML = h + ':' + m + ':' + s;  
+      }, 1000);
+    </script>
+    <span style="color:#FFFFFF; font-size:14pt; padding:5px;">
+    <span id="time">00:00:00</span>
+    </span>
+  </div>
+</body>
+</html>
