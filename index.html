@@ -1,98 +1,86 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>ItsOlegDm</title>
-        <meta property="og:title" content="ItsOlegDm">
-        <meta property="og:locale" content="en_EU">
-        <meta property="og:description" content="ItsOlegDm's main page">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
-        <script src="https://sindresorhus.com/devtools-detect/index.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/fonts/gsans/style.css">
-        <link rel="stylesheet" href="assets/vars.css">
-        <link rel="stylesheet" href="assets/css/index/style.css">
-        <script defer src="assets/fontawesome/js/all.js"></script> 
-        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<head> <!-- спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо спасибо -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="да.">
+    <title>ItsOlegDm</title>
+    <!-- <meta name="image" content="https://wlopfans.club/assets/img/gblogo.png"> -->
+    <meta name="name" content="ItsOlegDm">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/img.css">
+    <link rel="stylesheet/less" type="text/css" href="assets/css/radio.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="assets/js/index.js"></script>
+</head>
 
-        
-    </head>
-    <div id="donate">
-            <div class="popup">
+<body>
+    <!-- автор сайта. автор. -->
 
-                  <div class="labelbtn"><label1 class="donate_title">Донат</label>
-                  <a href="javascript://" class="btnc" onclick="document.getElementById('donate').style.display='none';"><i class="fas fa-times"></i></a>
-                  </div>
-           
-                       <center>  <form action="https://itsolegdm.dyaka.com/itsolegdm_site" method="get">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="name" placeholder="Ваше Имя" required="" minlength="2">
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <input type="number" class="form-control" name="amount" placeholder="Сумма" autocomplete="off" required="" value="10" min="1" step="1">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <textarea rows="8" class="form-control" name="message" placeholder="Сообщение"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-danger btn-block btn-lg">Задонатить</button>
-                        </div>
-                    </form>
-  </center>
-                    
-                <script type="text/javascript">
-                  $(document).mouseup(function (e){
-                  var modalctr = $("#donate");
-                  var modal = $(".popup");
-                  if (!modal.is(e.target) && modal.has(e.target).length === 0){
-                  modalctr.hide();
-}
-});</script>
+    <div class="modalback" id="donate">
+        <div class="modal">
+            <div class="dhead" id="modalheadermenu">
+                <span class="dhead">Донат</span>
+                <ion-icon class="dclose" id="removequestion" name="close" onclick="modal('donate')"></ion-icon>
             </div>
+
+            <div class="dnicksumm">
+                <div class="dnick">
+                    <div class="dheader"><span>Имя</span></div>
+                    <input class="dnick" type="text" id="userdon" placeholder="Лбо Тостерович" maxlength="15">
+                </div>
+                <div class="dsumm">
+                    <div class="dheader"><span>Сумма</span></div>
+                    <input class="dsumm" type="text" id="donsum" placeholder="727₽" value="10" maxlength="5">
+                </div>
+            </div>
+
+            <div class="dcomment">
+                <div class="dheader"><span>Комментарий</span></div>
+                <textarea rows="6" class="dcomment" id='comdon' type="text" style="resize: none; width: 100%;"
+                    maxlength="182" placeholder="Напишите что нибудь..."></textarea>
+            </div>
+
+
+
+            <div class="paymentType">
+                <div class="dheader" style="margin-top: 10px; margin-bottom: -3px;"><span>Способ оплаты</span></div>
+                <div class="radio">
+                    <input id="radio-1" name="paymentType" type="radio" checked value="PC">
+                    <label for="radio-1" class="radio-label">ЮMoney</label>
+                </div>
+                <div class="radio">
+                    <input id="radio-2" name="paymentType" type="radio" value="AC">
+                    <label for="radio-2" class="radio-label">Банковской картой</label>
+                </div>
+            </div>
+
+            <input type="submit" class="dbtn" value="Прейти к оплате" onclick="donateshit()">
         </div>
-
-    <body class="center">
-<header class="center info">
-    <div class="center ebat">
-        <div class="avatar-container"><img src="assets/images/ava.jpg" oncontextmenu="return false;" class="avatar"></div>
-        <h3><b><span id="name">ItsOlegDm</span></b></h2>
-    <h2><span id="description" >So, what are you doing here?</span></h3>
     </div>
-    <div class="buttons">
-        <a href="javascript://" class="link" onclick="location.href='tg://resolve?domain=itsolegdm'"><i class="fab fa-telegram-plane"></i></a>
-        <a href="javascript://" class="link" onclick="location.href='https://vk.com/itsolegdm'"><i class="fab fa-vk"></i></a>
-        <a href="javascript://" class="link" onclick="location.href='https://www.instagram.com/itsolegdm/'"><i class="fab fa-instagram"></i></a>
-    </div>
-    <div class="buttons">
-      <a href="javascript://" class="link" onclick="location.href='https://twitter.com/_itsolegdm'"><i class="fab fa-twitter"></i></a>
-       <a href="javascript://" class="link" onclick="document.getElementById('donate').style.display='block'"><i class="fas fa-dollar-sign"></i></a>
-    </div>
-    <div class="center ebat">
 
-</header>
-
-  <div>
-         <script type="text/javascript">  
-      setInterval(function () {  
-      date = new Date(),  
-      h = date.getHours(),  
-      m = date.getMinutes(),  
-      s = date.getSeconds(),  
-      h = (h < 10) ? '0' + h : h,  
-      m = (m < 10) ? '0' + m : m,  
-      s = (s < 10) ? '0' + s : s,  
-    document.getElementById('time').innerHTML = h + ':' + m + ':' + s;  
-      }, 1000);
-    </script>
-    <span style="color:#FFFFFF; font-size:14pt; padding:5px;">
-    <span id="time">00:00:00</span>
-    </span>
-  </div>
+    <div class="card">
+        <div class="avatar"></div>
+        <span class="nick">ItsOlegDm</span>
+        <div class="btns">
+            <a href="tg://resolve?domain=iodoff" class="btn">
+                <ion-icon class="rm" src="assets/icons/telegram.svg"></ion-icon>
+            </a>
+            <a href="https://vk.com/itsolegdm" target="_blank" class="btn">
+                <ion-icon name="logo-vk"></ion-icon>
+                </ion-icon>
+            </a>
+            <a href="https://github.com/ItsOlegDm" target="_blank" class="btn">
+                <ion-icon class="rm" src="assets/icons/github.svg"></ion-icon>
+            </a>
+        </div>
+        <div class="btns">
+            <a href="javascript://" onclick='alert("Когда нибудь, я обязательно сделаю доки...")'
+                style="font-weight: 700; font-size: 13px;" class="btn" </a>API</ion-icon></a>
+            <a href="javascript://" onclick='modal("donate")' class="btn" </a>
+                <ion-icon class="rm" src="assets/icons/dollar.svg"></ion-icon>
+            </a>
+        </div>
+    </div>
 </body>
-</html>
