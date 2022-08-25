@@ -1,4 +1,8 @@
 # itsolegdm.me
-крч тупо топ сайт для хороших людей
-![image](https://user-images.githubusercontent.com/55553104/143110319-903bc591-e1a2-4801-a3df-f7a09df18867.png)
-есть форма для доната в юмани и вкюай без вкюай :D
+Мой сайт. 
+Есть форма для доната через PayPal и Monobank и.... 
+...вкюай без вкюай
+![image](https://user-images.githubusercontent.com/55553104/186777689-0f83463f-f58b-42d3-9a0f-c9d5b3ca3c0a.png)
+![image](https://user-images.githubusercontent.com/55553104/186777694-224c691b-6ad3-44bd-a38d-cf28cefccf75.png)
+![image](https://user-images.githubusercontent.com/55553104/186778480-11047f8e-c4e0-462b-856f-59a08269fda6.png)
+
