@@ -8,16 +8,20 @@
     <meta name="name" content="ItsOlegDm">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/img.css">
+    <link rel="stylesheet" href="assets/css/custom-select.css">
     <link rel="stylesheet/less" type="text/css" href="assets/css/radio.less" />
+    
     <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
+    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="assets/js/custom-select.js"></script>
     <script src="assets/js/index.js"></script>
+
 </head>
 
 <body>
     <!-- автор сайта. автор. -->
-
     <div class="modalback" id="donate">
         <div class="modal"> <!--FINALLY
         VKUI WITHOUT VKUI--> 
@@ -29,11 +33,14 @@
             <div class="dnicksumm">
                 <div class="dnick">
                     <div class="dheader"><span>Имя</span></div>
-                    <input class="dnick" type="text" id="userdon" placeholder="Лбо Тостерович" maxlength="15">
+                    <input class="dnick" type="text" id="userdon" placeholder="Вася пупкин" maxlength="15">
                 </div>
                 <div class="dsumm">
                     <div class="dheader"><span>Сумма</span></div>
-                    <input class="dsumm" type="text" id="donsum" placeholder="727₽" value="10" maxlength="5">
+                    <div class="dsumselect">
+                        <input class="dsumm" type="text" id="donsum" placeholder="727" maxlength="5">
+                        <div class="select" id="select-currency"></div>
+                    </div>
                 </div>
             </div>
 
@@ -42,24 +49,42 @@
                 <textarea rows="6" class="dcomment" id='comdon' type="text" style="resize: none; width: 100%;"
                     maxlength="182" placeholder="Напишите что нибудь..."></textarea>
             </div>
-
-
-
             <div class="paymentType">
                 <div class="dheader" style="margin-top: 10px; margin-bottom: -3px;"><span>Способ оплаты</span></div>
                 <div class="radio">
-                    <input id="radio-1" name="paymentType" type="radio" checked value="PC">
-                    <label for="radio-1" class="radio-label">ЮMoney</label>
+                    <input id="radio-1" class="radioinput" name="paymentType" type="radio" checked value="paypal">
+                    <label for="radio-1" class="radio-label">PayPal</label>
                 </div>
-                <div class="radio">
-                    <input id="radio-2" name="paymentType" type="radio" value="AC">
-                    <label for="radio-2" class="radio-label">Банковской картой</label>
+                <div class="radio radiomono">
+                    <input id="radio-2" class="radioinput rinputmono" name="paymentType" type="radio" value="mono">
+                    <label for="radio-2" class="radio-label">Monobank</label>
                 </div>
+                <a target="_blank" href="https://destream.net/live/itsolegdm/donate" class="destream">
+                    <ion-icon class="dstricon" src="assets/icons/destream.svg"></ion-icon>
+                    <span class="radio-label">Destream</span>
+                </a>
             </div>
 
             <input type="submit" class="dbtn" value="Прейти к оплате" onclick="donateshit()">
         </div>
     </div>
+
+    <div class="modalback" id="discord">
+        <div class="modal"> <!--FINALLY
+        VKUI WITHOUT VKUI--> 
+            <div class="dhead" id="modalheadermenu">
+                <span class="dhead">Discord</span>
+                <ion-icon class="dclose" id="removequestion" name="close" onclick="modal('discord')"></ion-icon>
+            </div>
+                <div>
+                    <div class="dheader"><span>Скопируй короче</span></div>
+                    <input class="dnick" type="text" id="userdon" placeholder="ItsOlegDm#0070" maxlength="14" value="ItsOlegDm#0070">
+                </div>
+                
+            <button style="margin-top: 15px;" class="dbtn" onclick="navigator.clipboard.writeText('ItsOlegDm#0070')">Скопировать</button>
+        </div>
+    </div>
+
     <div class="center">
         <div class="card">
             <div class="avatar"></div>
@@ -68,9 +93,8 @@
                 <a href="tg://resolve?domain=iodoff" class="btn">
                     <ion-icon class="rm" src="assets/icons/telegram.svg"></ion-icon>
                 </a>
-                <a href="https://vk.com/itsolegdm" target="_blank" class="btn">
-                    <ion-icon name="logo-vk"></ion-icon>
-                    </ion-icon>
+                <a href="javascript://" onclick='modal("discord")' class="btn" </a>
+                    <ion-icon class="rm" src="assets/icons/discock.svg"></ion-icon>
                 </a>
                 <a href="https://github.com/ItsOlegDm" target="_blank" class="btn">
                     <ion-icon class="rm" src="assets/icons/github.svg"></ion-icon>
@@ -83,6 +107,14 @@
                     <ion-icon class="rm" src="assets/icons/dollar.svg"></ion-icon>
                 </a>
             </div>
+
+            <div style="margin-top: 20px; text-align: center;">
+                <div class="" style="background: blue; width: 160px; height: 45px; border-radius: 5px 5px 0 0;"></div>
+                <div class="" style="background: yellow; width: 160px; height: 45px; border-radius: 0 0 5px 5px; margin-bottom: 15px;"></div>
+                <span style="font-family: 'PT Sans', sans-serif; width: 160px;   font-size: 20px; font-weight: bold; color: white;">#STOPWAR</span>
+            </div>
+
         </div>
     </div>
 </body>
+

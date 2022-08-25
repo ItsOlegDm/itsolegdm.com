@@ -109,7 +109,11 @@ a {
         width: calc(100% - 40px);
     }
 }
-    
+@media screen and (min-width: 800px) {
+    .radiomono {
+        display: none!important;
+    }
+}
 div.dhead {
     width: 100%;
     height: 60px;
@@ -128,7 +132,7 @@ span.dhead {
 }
 
 div.dnick {
-    width: calc(100% - 87px);
+    width: calc(100% - 165px);
 }
 
 input.dnick, input.dsumm  {
@@ -137,7 +141,10 @@ input.dnick, input.dsumm  {
 
 div.dsumm {
     margin-left: 10px;
-    width: 77px;
+    width: 155px;
+}
+input.dsumm {
+    margin-right: 6px;
 }
 
 .dsumm .bruh {
@@ -173,6 +180,22 @@ input[type='text']:hover, textarea:hover {
 }
 input[type='text']:focus, textarea:focus {
     border: 2px solid #de6161;
+}
+input[type='text']:disabled, textarea:disabled {
+    background-color: #383838;
+}
+select {
+    height: 40px;
+    font-size: 16px;
+    /* font-family: 'PT Sans', sans-serif; */
+    
+    background-color: #232324;
+    color: #e1e3e6;
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    transition: 0.3s;
+    outline: none;
 }
 
 .dheader {
@@ -219,4 +242,27 @@ input[type='text']:focus, textarea:focus {
     color: #e1e3e6;
     font-size: 25px;
     padding-right: 7px;
+    cursor: pointer;
+}
+.dsumselect {
+    display: flex;
+}
+.destream {
+    margin-top: 3px;
+    cursor: pointer;
+    height: 20px;
+    width: fit-content;
+    transition: .1s;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dstricon {
+    margin-right: 7px;
+}
+
+.destream:hover {
+    background-color: #9094997e;
 }
