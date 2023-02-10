@@ -26,17 +26,17 @@
         <div class="modal"> <!--FINALLY
         VKUI WITHOUT VKUI--> 
             <div class="dhead" id="modalheadermenu">
-                <span class="dhead">Донат</span>
+                <span class="dhead">Donate</span>
                 <ion-icon class="dclose" id="removequestion" name="close" onclick="modal('donate')"></ion-icon>
             </div>
 
             <div class="dnicksumm">
                 <div class="dnick">
-                    <div class="dheader"><span>Имя</span></div>
-                    <input class="dnick" type="text" id="userdon" placeholder="Вася Пупкин" maxlength="15">
+                    <div class="dheader"><span>Name</span></div>
+                    <input class="dnick" type="text" id="userdon" placeholder="who?" maxlength="15">
                 </div>
                 <div class="dsumm">
-                    <div class="dheader"><span>Сумма</span></div>
+                    <div class="dheader"><span>Amount</span></div>
                     <div class="dsumselect">
                         <input class="dsumm" type="text" id="donsum" placeholder="727" maxlength="5">
                         <div class="select" id="select-currency"></div>
@@ -45,12 +45,12 @@
             </div>
 
             <div class="dcomment">
-                <div class="dheader"><span>Комментарий</span></div>
+                <div class="dheader"><span>Message</span></div>
                 <textarea rows="6" class="dcomment" id='comdon' type="text" style="resize: none; width: 100%;"
-                    maxlength="182" placeholder="Напишите что нибудь..."></textarea>
+                    maxlength="182" placeholder="It is probably 3 am and the among us troll face is calling me..."></textarea>
             </div>
             <div class="paymentType">
-                <div class="dheader" style="margin-top: 10px; margin-bottom: -3px;"><span>Способ оплаты</span></div>
+                <div class="dheader" style="margin-top: 10px; margin-bottom: -3px;"><span>Payment method</span></div>
                 <div class="radio">
                     <input id="radio-1" class="radioinput" name="paymentType" type="radio" checked value="paypal">
                     <label for="radio-1" class="radio-label">PayPal</label>
@@ -65,7 +65,7 @@
                 </a>
             </div>
 
-            <input type="submit" class="dbtn" value="Прейти к оплате" onclick="donateshit()">
+            <input type="submit" class="dbtn" value="Donate" onclick="donateshit()">
         </div>
     </div>
 
@@ -77,11 +77,11 @@
                 <ion-icon class="dclose" id="removequestion" name="close" onclick="modal('discord')"></ion-icon>
             </div>
                 <div>
-                    <div class="dheader"><span>Скопируй короче</span></div>
+                    <div class="dheader"><span>Just copy this</span></div>
                     <input class="dnick" type="text" id="userdon" placeholder="ItsOlegDm#0070" maxlength="14" value="ItsOlegDm#0070">
                 </div>
                 
-            <button style="margin-top: 15px;" class="dbtn" onclick="navigator.clipboard.writeText('ItsOlegDm#0070')">Скопировать</button>
+            <button style="margin-top: 15px;" class="dbtn" onclick="navigator.clipboard.writeText('ItsOlegDm#0070')">Copy</button>
         </div>
     </div>
 
@@ -91,19 +91,20 @@
             <span class="nick">ItsOlegDm</span>
             <div class="btns">
                 <a href="tg://resolve?domain=iodoff" class="btn">
-                    <ion-icon class="rm" src="assets/icons/telegram.svg"></ion-icon>
+                    <ion-icon class="rm" src="assets/icons/telegram.svg" title="Telegram shitpost channel"></ion-icon>
                 </a>
-                <a href="javascript://" onclick='modal("discord")' class="btn" </a>
+                <a href="javascript://" onclick='modal("discord")' class="btn" title="Discord"</a>
                     <ion-icon class="rm" src="assets/icons/discock.svg"></ion-icon>
                 </a>
-                <a href="https://github.com/ItsOlegDm" target="_blank" class="btn">
+                <a href="https://github.com/ItsOlegDm" target="_blank" class="btn" title="GitHub">
                     <ion-icon class="rm" src="assets/icons/github.svg"></ion-icon>
                 </a>
             </div>
             <div class="btns">
-                <a href="javascript://" onclick='alert("Когда нибудь, я обязательно сделаю доки...")'
-                    style="font-weight: 700; font-size: 13px;" class="btn" </a>API</ion-icon></a>
-                <a href="javascript://" onclick='modal("donate")' class="btn" </a>
+                <a href="https://www.last.fm/user/ItsOlegDm" target="_blank" class="btn" title="LastFM">
+                    <ion-icon class="rm" src="assets/icons/lastfm.svg"></ion-icon>
+                </a>
+                <a href="javascript://" onclick='modal("donate")' class="btn" title="Pay me money"</a>
                     <ion-icon class="rm" src="assets/icons/dollar.svg"></ion-icon>
                 </a>
             </div>

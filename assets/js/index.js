@@ -57,39 +57,39 @@ let donateshit = function () {
     {
     case "paypal":
         params = {
-            'business': 'itsolegdm@gmail.com', // ГмЭиЛ получателя
-            'item_name': tss3, // ім`я, по батькові
-            'item_number': tss2, // cumментарий
-            'no_recurring': '0',// да.
-            'currency_code': currency.value, // какая деньга????*
-            'amount': inputelem.value, // ура куплю ещё одного хохло-раба
+            'business': 'itsolegdm@gmail.com', // GmAiL
+            'item_name': tss3, // who r u
+            'item_number': tss2, // cummentary
+            'no_recurring': '0',// yes.
+            'currency_code': currency.value, // what money???
+            'amount': inputelem.value, // yey, neq slave
         }
 
-        uri = `https://www.paypal.com/donate` // ПЛАТНО
+        uri = `https://www.paypal.com/donate` // PAY
         break;
     case "mono":
         params = {
-            'a': inputelem.value, // ім`я, по батькові
-            't': tss2, // cumментарий
+            'a': inputelem.value, // who r u x2
+            't': tss2, // cummentary
         }
     
-        uri = `app://com.ftband.mono/pay/4zyffgWyWo`// 4zyffgWyWo - идентификатор получателя, можно стырить с сайта апишики монобанка
+        uri = `app://com.ftband.mono/pay/4zyffgWyWo`// 4zyffgWyWo - recipient's identifier, you can find it using monobank's api
 
         if(window.screen.width > 800)
-            alert("Оплата через monobank доступна только на мобильных устройствах.")
+            alert("Payment via monobank is only available on mobile devices.")
 
         break; 
     default:
-        alert('Выбери способ оплаты.');
+        alert('Choose payment method.');
      
     }
     
     
-    window.location.href = `${uri}${dictToURI(params)}` // i don't care, кст удали пасхалку - © Kr3st1k
-    return true; // const false = true; (раскомментить если не работает)
+    window.location.href = `${uri}${dictToURI(params)}` // i don't care - © Kr3st1k
+    return true; // const false = true; (uncomment)
 }
 
-let forget_about_it_donateshit_yansber = function () {
+let forget_about_it_donateshit_yansber = function () { // dont use this shit
     var inputelem = document.getElementById('donsum');
     const tss = document.querySelector(`input[name='paymentType']:checked`).value;
     const tss3 = document.getElementById('userdon').value;
@@ -102,31 +102,29 @@ let forget_about_it_donateshit_yansber = function () {
         return '?' + str.join('&');
     }
     const params = {
-        'receiver': '4100115820568367', // Номер ЮMoney кошелька получателя
-        'formcomment': 'Донат ItsOlegDm', // Название перевода в истории отправителя 
-        'short-dest': 'Донат ItsOlegDm', // Название перевода на странице подтверждения
-        'label': 'donate', // Бесполезная фигня
-        'quickpay-form': 'donate', // да.
-        'targets': 'Донат ItsOlegDm', //Назначение платежа
-        'need-fio': 'false', // фио надо? не надо
-        'need-email': 'false', // почту надо? не надо
-        'need-phone': 'false', //  трубка? не надо
-        'need-address': 'false', // ip дашь? не дашь 
-        'successURL': 'https://itsolegdm.me/spasibo.html', // сюда челик попадет после того как оплатит нам 2кг сала
-        'comment': (tss3 + (tss2 != '' && tss3 != '' ? ': ' : '') + tss2).trim(), // говнокоммент
-        'sum': inputelem.value, // ура куплю ещё одного хохло-раба
-        'paymentType': tss ? tss.value : 'PC' //  на комп. (нет) (yoomoney)
+        'receiver': '4100115820568367', // no
+        'formcomment': 'Донат ItsOlegDm',
+        'short-dest': 'Донат ItsOlegDm',
+        'label': 'donate',
+        'quickpay-form': 'donate', 
+        'targets': 'Донат ItsOlegDm',
+        'need-fio': 'false', 
+        'need-email': 'false', 
+        'need-phone': 'false', 
+        'need-address': 'false', 
+        'successURL': 'https://itsolegdm.me/spasibo.html',
+        'comment': (tss3 + (tss2 != '' && tss3 != '' ? ': ' : '') + tss2).trim(), 
+        'sum': inputelem.value, 
+        'paymentType': tss ? tss.value : 'PC'
     }
 
     if (isNaN(inputelem.value)) {
         !inputelem.className.includes('bruh') && (inputelem.className = inputelem.className + ' bruh') // bruh
     } else {
-        window.location.href = `https://yoomoney.ru/quickpay/confirm.xml${dictToURI(params)}` // ПЛАТНО
+        window.location.href = `https://yoomoney.ru/quickpay/confirm.xml${dictToURI(params)}`
     }
-    //кст автор кода тоже любит кастыли. (автор кста kr3st1k)
-    return true; // let true = false; (раскомментить если не работает)
+    return true; 
 }
-
 function modal(id) {
     var accmenu = document.getElementById(id);
 
@@ -136,22 +134,22 @@ function modal(id) {
             accmenu.style.display = 'none';
         }, 300);
     } else {
-        if (id == 'donate') { // начало пасхалки для избранных
-            if (window.location.search.includes("egg")) { // пасхалка для избранных
-                if (document.getElementById("kris") == null) { // пасхалка для избранных
-                    var exitbutton = document.createElement('img'); // пасхалка для избранных
-                    document.getElementById('removequestion').remove() // пасхалка для избранных
-                    exitbutton.style.cssText = "height: 30px; width: 30px; padding-right: 5px; cursor: pointer;"; // пасхалка для избранных
-                    exitbutton.id = "kris"; // пасхалка для избранных
-                    exitbutton.title = "kr3st1k"; // пасхалка для избранных
-                    exitbutton.src = "https://i.imgur.com/SF7P0bh.png"; // пасхалка для избранных
+        if (id == 'donate') { // The beginning of the Easter Egg for the Chosen Ones
+            if (window.location.search.includes("egg")) { // Easter Egg for the Chosen Ones
+                if (document.getElementById("kris") == null) { // Easter Egg for the Chosen Ones
+                    var exitbutton = document.createElement('img'); // Easter Egg for the Chosen Ones
+                    document.getElementById('removequestion').remove() // Easter Egg for the Chosen Ones
+                    exitbutton.style.cssText = "height: 30px; width: 30px; padding-right: 5px; cursor: pointer;"; // Easter Egg for the Chosen Ones
+                    exitbutton.id = "kris"; // Easter Egg for the Chosen Ones
+                    exitbutton.title = "kr3st1k"; // Easter Egg for the Chosen Ones
+                    exitbutton.src = "https://i.imgur.com/SF7P0bh.png"; // Easter Egg for the Chosen Ones
                     exitbutton.addEventListener('click', () => {
                         modal(id)
-                    }) // пасхалка для избранных
-                    document.getElementById('modalheadermenu').appendChild(exitbutton); // пасхалка для избранных
-                } // пасхалка для избранных
-            } // пасхалка для избранных
-        } // конец пасхалки для избранных
+                    }) // Easter Egg for the Chosen Ones
+                    document.getElementById('modalheadermenu').appendChild(exitbutton); // Easter Egg for the Chosen Ones
+                } // Easter Egg for the Chosen Ones
+            } // Easter Egg for the Chosen Ones
+        } // The End of the Easter Egg for the Chosen Ones
         accmenu.style.display = 'flex';
         setTimeout(() => {
             accmenu.style.opacity = '1';
