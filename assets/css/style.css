@@ -110,8 +110,11 @@ a {
     }
 }
 @media screen and (min-width: 800px) {
-    .radiomono {
+    .paymentType {
         display: none!important;
+    }
+    .dcomment {
+        margin-bottom: 10px;
     }
 }
 div.dhead {
