@@ -2,7 +2,7 @@ let currency = {};
 document.addEventListener('DOMContentLoaded', () => {
     currency = new CustomSelect('#select-currency', {
         name: 'currency',
-        targetValue: 'UAH',
+        targetValue: 'USD',
         options: [
             ['UAH', 'UAH'],
             ['USD', 'USD'],
@@ -30,14 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 let donateshit = function () {
-    var inputelem = document.getElementById('donsum');
+    let inputelem = document.getElementById('donsum');
     const tss = document.querySelector(`input[name='paymentType']:checked`).value;
     const tss3 = document.getElementById('userdon').value;
     const tss2 = document.getElementById('comdon').value;
     //currency.value
     const dictToURI = (dict) => {
-        var str = [];
-        for (var p in dict) {
+        let str = [];
+        for (let p in dict) {
             str.push(encodeURIComponent(p) + '=' + encodeURIComponent(dict[p]));
         }
         return '?' + str.join('&');
@@ -90,13 +90,13 @@ let donateshit = function () {
 }
 
 let forget_about_it_donateshit_yansber = function () { // dont use this shit
-    var inputelem = document.getElementById('donsum');
+    let inputelem = document.getElementById('donsum');
     const tss = document.querySelector(`input[name='paymentType']:checked`).value;
     const tss3 = document.getElementById('userdon').value;
     const tss2 = document.getElementById('comdon').value;
     const dictToURI = (dict) => {
-        var str = [];
-        for (var p in dict) {
+        let str = [];
+        for (let p in dict) {
             str.push(encodeURIComponent(p) + '=' + encodeURIComponent(dict[p]));
         }
         return '?' + str.join('&');
@@ -126,7 +126,7 @@ let forget_about_it_donateshit_yansber = function () { // dont use this shit
     return true; 
 }
 function modal(id) {
-    var accmenu = document.getElementById(id);
+    let accmenu = document.getElementById(id);
 
     if (accmenu.style.display == 'flex') {
         accmenu.style.opacity = "0";
@@ -137,7 +137,7 @@ function modal(id) {
         if (id == 'donate') { // The beginning of the Easter Egg for the Chosen Ones
             if (window.location.search.includes("egg")) { // Easter Egg for the Chosen Ones
                 if (document.getElementById("kris") == null) { // Easter Egg for the Chosen Ones
-                    var exitbutton = document.createElement('img'); // Easter Egg for the Chosen Ones
+                    let exitbutton = document.createElement('img'); // Easter Egg for the Chosen Ones
                     document.getElementById('removequestion').remove() // Easter Egg for the Chosen Ones
                     exitbutton.style.cssText = "height: 30px; width: 30px; padding-right: 5px; cursor: pointer;"; // Easter Egg for the Chosen Ones
                     exitbutton.id = "kris"; // Easter Egg for the Chosen Ones
