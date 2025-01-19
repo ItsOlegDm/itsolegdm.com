@@ -26,6 +26,23 @@ document.addEventListener('DOMContentLoaded', () => {
             $('.select__toggle').css("background-color", "#232324");
         };
     });
+
+    let url = 'https://lastfm-last-played.biancarosa.com.br/itsolegdm/latest-song';
+    let songname = document.querySelector('#songname');
+    let song = document.querySelector('#song');
+    
+    fetch(url)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (json) {
+            song.style.display = "flex";
+            songname.innerHTML = '<span id="song_lt">Listening to</span> ' + json['track']['artist']['#text'] + ' - ' + json['track']['name'];
+            songname.href = json['track']['url']
+        })
+        .catch(function (error) {
+            song.innerHTML = 'Error loading song: ' + error.message;
+        });
 })
 
 
@@ -156,3 +173,4 @@ function modal(id) {
         }, 100);
     }
 }
+

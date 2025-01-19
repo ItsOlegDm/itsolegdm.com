@@ -269,3 +269,26 @@ select {
 .destream:hover {
     background-color: #9094997e;
 }
+
+#song {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-family: 'PT Sans', sans-serif;
+    color: #ffffff9c;
+    align-items: center;
+}
+#song>ion-icon {
+    margin-right: 10px;
+}
+#song_lt {
+    color: #ffffff9c;
+}
+#songname {
+    text-decoration: none;
+    color: #ffffff9c;
+}
+#songname:hover {
+    color: #fff;
+}
