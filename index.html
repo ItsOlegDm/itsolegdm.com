@@ -17,7 +17,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="assets/js/custom-select.js"></script>
     <script src="assets/js/index.js"></script>
-
+    <script defer src="https://analytics.foxgirls.org/script.js" data-website-id="009ac2a8-45d6-4e81-a4f4-adc21aa9e1f9"></script>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
         VKUI WITHOUT VKUI--> 
             <div class="dhead" id="modalheadermenu">
                 <span class="dhead">Donate</span>
-                <ion-icon class="dclose" id="removequestion" name="close" onclick="modal('donate')"></ion-icon>
+                <ion-icon class="dclose" id="removequestion" name="close" onclick="modal('donate');"></ion-icon>
             </div>
 
             <div class="dnicksumm">
@@ -61,7 +61,7 @@
                 </div>
             </div>
 
-            <input type="submit" class="dbtn" value="Donate" onclick="donateshit()">
+            <input type="submit" class="dbtn" value="Donate" onclick="donateshit();umami.track('donate-button');">
         </div>
     </div>
 
@@ -70,32 +70,26 @@
             <div class="avatar"></div>
             <span class="nick">ItsOlegDm</span>
             <div class="btns">
-                <a href="tg://resolve?domain=iodoff" class="btn">
+                <a href="tg://resolve?domain=iodoff" class="btn" onclick="umami.track('telegram-channel-button');">
                     <ion-icon class="rm" src="assets/icons/telegram.svg" title="Telegram shitpost channel"></ion-icon>
                 </a>
-                <a href="https://discord.com/users/646963669799796738" target="_blank" class="btn" title="Discord"</a>
+                <a href="https://discord.com/users/646963669799796738" target="_blank" class="btn" title="Discord" onclick="umami.track('discord-button');"</a>
                     <ion-icon class="rm" src="assets/icons/discock.svg"></ion-icon>
                 </a>
-                <a href="https://github.com/ItsOlegDm" target="_blank" class="btn" title="GitHub">
+                <a href="https://github.com/ItsOlegDm" target="_blank" class="btn" title="GitHub" onclick="umami.track('github-button');">
                     <ion-icon class="rm" src="assets/icons/github.svg"></ion-icon>
                 </a>
             </div>
             <div class="btns">
-                <a href="https://www.last.fm/user/ItsOlegDm" target="_blank" class="btn" title="LastFM">
+                <a href="https://www.last.fm/user/ItsOlegDm" target="_blank" class="btn" title="LastFM" onclick="umami.track('lastfm-button');">
                     <ion-icon class="rm" src="assets/icons/lastfm.svg"></ion-icon>
                 </a>
-                <a href="https://anilist.co/user/ItsOlegDm/" target="_blank" class="btn" title="AniList"</a>
+                <a href="https://anilist.co/user/ItsOlegDm/" target="_blank" class="btn" title="AniList" onclick="umami.track('anilist-button');"</a>
                     <ion-icon class="rm" src="assets/icons/anilist.svg"></ion-icon>
                 </a>
-                <a href="javascript://" onclick='modal("donate")' class="btn" title="Pay me money"</a>
+                <a href="javascript://" onclick='modal("donate")' class="btn" title="Pay me money" onclick="umami.track('donate-button');"</a>
                     <ion-icon class="rm" src="assets/icons/dollar.svg"></ion-icon>
                 </a>
-            </div>
-
-            <div style="margin-top: 20px; text-align: center;">
-                <div class="" style="background: blue; width: 160px; height: 45px; border-radius: 5px 5px 0 0;"></div>
-                <div class="" style="background: yellow; width: 160px; height: 45px; border-radius: 0 0 5px 5px; margin-bottom: 15px;"></div>
-                <span style="font-family: 'PT Sans', sans-serif; width: 160px;   font-size: 20px; font-weight: bold; color: white;">#STOPWAR</span>
             </div>
 
         </div>
