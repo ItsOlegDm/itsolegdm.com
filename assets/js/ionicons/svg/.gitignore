@@ -3,3 +3,4 @@
 # contain files generated during a build step.
 *
 !.gitignore
+!musical-notes-outline.svg
