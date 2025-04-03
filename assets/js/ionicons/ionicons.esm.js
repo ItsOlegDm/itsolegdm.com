@@ -1,0 +1,2 @@
+import{p as o,b as n}from"./p-BXmXqLMh.js";export{s as setNonce}from"./p-BXmXqLMh.js";import{g as i}from"./p-DQuL1Twl.js";(()=>{const n=import.meta.url,s={};return""!==n&&(s.resourcesUrl=new URL(".",n).href),o(s)})().then((async o=>(await i(),n([["p-581f4fb3",[[1,"ion-icon",{mode:[1025],color:[1],ios:[1],md:[1],flipRtl:[4,"flip-rtl"],name:[513],src:[1],icon:[8],size:[1],lazy:[4],sanitize:[4],svgContent:[32],isVisible:[32]},null,{name:["loadIcon"],src:["loadIcon"],icon:["loadIcon"],ios:["loadIcon"],md:["loadIcon"]}]]]],o))));
+//# sourceMappingURL=ionicons.esm.js.map
